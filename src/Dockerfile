@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y libpng12-dev libjpeg-dev && rm -rf /var
 &&  docker-php-ext-install gd mysqli opcache
 
 COPY production.ini /usr/local/etc/php/php.ini
-COPY src/docker-config.php /var/www/html/docker-config.php
-COPY src/plugins/ /var/www/html/wp-content/mu-plugins/
+COPY docker-config.php /var/www/html/docker-config.php
+COPY plugins/ /var/www/html/wp-content/mu-plugins/
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
