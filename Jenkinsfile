@@ -1,4 +1,7 @@
 node {
+  stage 'checkout'
+  checkout scm
+
   // Mark the code build 'stage'....
   stage 'Build'
 
